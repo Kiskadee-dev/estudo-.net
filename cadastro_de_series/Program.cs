@@ -33,6 +33,7 @@ namespace cadastro_de_series
                         VisualizarSerie();
                         break;
                     case "C":
+                        LimparTela();
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();
@@ -159,6 +160,11 @@ namespace cadastro_de_series
             Serie serie = repositorio.RetornaPorId(id);
 
             Console.WriteLine(serie);
+        }
+
+        public static void LimparTela()
+        {
+            Console.Clear();
         }
     }
 }
